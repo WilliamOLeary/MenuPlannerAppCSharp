@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.mpa.menuplannerapp.Favourites"
+    android:id="@+id/layoutHolder">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/header_name"
+        android:id="@+id/nameHeading"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:singleLine="true"
+        android:gravity="left|center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffff"
+        android:layout_toLeftOf="@+id/caloriesHeading"
+        android:layout_toStartOf="@+id/caloriesHeading" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        style="@style/navbar_style">
+
+        <Button
+            android:id="@+id/homeLink"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/homeView"
+            android:textSize="12sp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="#FFFFFF"
+            android:onClick="showHome" />
+
+        <Button
+            android:id="@+id/weekLink"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/weekView"
+            android:textSize="12sp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="#FFFFFF"
+            android:onClick="showWeek"/>
+
+        <Button
+            android:id="@+id/shopListLink"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/shoppingList"
+            android:textSize="12sp"
+            android:layout_gravity="bottom"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="#FFFFFF"
+            android:onClick="showShoppingList" />
+
+        <Button
+            android:id="@+id/currGrocLink"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:text="@string/currentGroceries"
+            android:textSize="12sp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="#FFFFFF"
+            android:onClick="showGroceries" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/favouritesList"
+        android:layout_below="@+id/nameHeading"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:divider="#000000"
+        android:dividerHeight="2dp"
+        android:layout_above="@+id/addNewRecipeButton"
+        style="@style/background_style"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addDelRButton"
+        android:id="@+id/addNewRecipeButton"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="showCreateNewRecipe"
+        style="@style/button_style"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/favouritesCalories"
+        android:id="@+id/caloriesHeading"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/nameHeading"
+        android:textColor="#000000"
+        android:background="#ffffff"
+        android:gravity="center|right"
+        android:textSize="30sp" />
+
+</RelativeLayout>

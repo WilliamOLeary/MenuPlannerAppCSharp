@@ -1,4 +1,117 @@
 <resources>
-    <string name="app_name">MenuPlannerAppCSharp</string>
+    <string name="app_name">Menu Planner App</string>
+
     <string name="action_settings">Settings</string>
+    <string name="weekView">Week View</string>
+    <string name="shoppingList">Shopping List</string>
+    <string name="currentGroceries">Current Groceries</string>
+    <string name="favourites">Favourite Recipes</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="header_name">Name</string>
+
+    // Profile resources
+    <string name="profile_name">Name:</string>
+    <string name="profile_gender">Gender:</string>
+    <string name="profile_activity">Activity level:</string>
+    <string name="profile_goal">Goal:</string>
+    <string name="profile_save">Save Profile</string>
+
+    // List of entries for gender spinner in profile
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Prefer not to say</item>
+    </string-array>
+
+    // List of entries for activity spinner in profile
+    <string-array name="activity_array">
+        <item>Couch potato(under 30 minutes exercise daily)</item>
+        <item>Average (30 to 120 minutes of exercise daily)</item>
+        <item>Athletic (120 minutes of exercise daily)</item>
+    </string-array>
+
+    // List of entries for goal spinner in profile
+    <string-array name="goal_array">
+        <item>Weight loss</item>
+        <item>Muscle mass increase</item>
+        <item>To try new foods</item>
+        <item>Healthier diet</item>
+    </string-array>
+
+    // Recipes resources
+    <string name="recipeName">Recipe Name</string>
+    <string name="recipePictureDescription">This should be a picture of the recipe</string>
+    <string name="recipeIngredients">Ingredients:</string>
+    <string name="recipeMethod">Method:</string>
+    <string name="recipeCalories">Calories</string>
+    <string name="recipeFavouriteOn">Unfavourite</string>
+    <string name="recipeFavouriteOff">Favourite</string>
+
+    // Search/create resources
+    <string name="createName">Name:</string>
+    <string name="createPicture">Picture:</string>
+    <string name="createPictureButton">Browse</string>
+    <string name="createIngredients">Ingredients:</string>
+    <string name="createIngredientsLaunch">Add some ingredients</string>
+    <string name="createAddIngredients">Next Ingredient</string>
+    <string name="createMethod">Method:</string>
+    <string name="createAddMethod">Next Step</string>
+    <string name="createCalories">Calories:</string>
+    <string name="createFat">Fat:</string>
+    <string name="createCarb">Carbs:</string>
+    <string name="createProtein">Protein:</string>
+    <string name="createSodium">Sodium:</string>
+    <string name="createSave">Save Recipe</string>
+
+    // Favourites resources
+    <string name="favouritesName">Name</string>
+    <string name="favouritesCalories">Calories</string>
+
+    // Shopping list resources
+    <string name="shoppingBought">Selected items bought</string>
+
+    // AddDeleteFavourites resources
+    <string name="addDelRName">Name</string>
+    <string name="addDelRButton">Add New Recipes</string>
+    <string name="addDelRDelete">Delete</string>
+
+    // AddDeleteGroceries resources
+    <string name="addDelGName">Name:</string>
+    <string name="addDelGQuantity">Quantity:</string>
+    <string name="addDelGButton">Add grocery item</string>
+    <string name="addDelGDelete">Delete</string>
+
+    // Search result resources
+    <string name="searchResHeader">Local search results:</string>
+    <string name="searchResHeaderOnline">Online search results:</string>
+
+    <string name="title_activity_shopping_list">Shopping List</string>
+    <string name="homeView">Home</string>
+    <string name="nextMealMainMessage">Your next meal is:</string>
+    <string name="groceryName">Name</string>
+    <string name="groceryAmount">Qty</string>
+    <string name="groceryBought">Bought</string>
+    <string name="groceryAddButton">Add grocery item</string>
+    <string name="mealTimeMessage">For:</string>
+    <string name="title_activity_favourites">Favourites</string>
+    <string name="title_activity_recipes">Recipes</string>
+    <string name="title_activity_search_create">Search/Create</string>
+    <string name="title_activity_grocery">Groceries</string>
+    <string name="title_activity_add_delete_groceries">Add and Delete Groceries</string>
+    <string name="groceryDelete">Delete?</string>
+    <string name="title_activity_add_delete_favourites">Add and Delete Favourites</string>
+    <string name="editProfile">Edit Profile</string>
+    <string name="title_activity_week_planner">Week Planner</string>
+    <string name="weekCalories">Calories</string>
+    <string name="weekName">Name</string>
+    <string name="displayIngredients">Display Ingredients</string>
+    <string name="displayMethods">Display Methods</string>
+    <string name="title_activity_add_ingredients">Add Ingredients</string>
+    <string name="editRecipe">Edit</string>
+    <string name="viewRecipe">View</string>
+    <string name="replace">Replace recipe</string>
+    <string name="title_activity_search_result">Search Results</string>
+    <string name="title_activity_update_menu">Update Menu</string>
+    <string name="replaceSelect">Replace with selected</string>
+
 </resources>

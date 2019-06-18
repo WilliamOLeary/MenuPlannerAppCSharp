@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mpa.menuplannerappcsharp.Favourites">
+    <item
+        android:id="@+id/edit"
+        android:title="@string/editRecipe"
+        android:onClick="editRecipe"/>
+    <item
+        android:id="@+id/view"
+        android:title="@string/viewRecipe"
+        android:onClick="viewRecipe"/>
+</menu>

@@ -1,0 +1,57 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:fillViewport="true"
+    style="@style/background_style"
+    tools:context="com.mpa.menuplannerapp.Recipes">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/recipeName"
+            android:id="@+id/recipeName"
+            style="@style/text_style"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recipeImage"
+            android:contentDescription="@string/recipePictureDescription"
+            android:minHeight="400dp"
+            android:minWidth="400dp"
+            android:layout_weight="0.27"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center" />
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/favouriteToggle"
+            android:textOff="@string/recipeFavouriteOff"
+            android:textOn="@string/recipeFavouriteOn"
+            style="@style/button_style"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detailsTable"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="false"></TableLayout>
+    </LinearLayout>
+
+</ScrollView>

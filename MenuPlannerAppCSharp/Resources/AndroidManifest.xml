@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mpa.menuplannerappcsharp" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile" >
+        </activity>
+        <activity
+            android:name=".ShoppingList"
+            android:label="@string/title_activity_shopping_list" >
+        </activity>
+        <activity
+            android:name=".Favourites"
+            android:label="@string/title_activity_favourites" >
+        </activity>
+        <activity
+            android:name=".Recipes"
+            android:label="@string/title_activity_recipes" >
+        </activity>
+        <activity
+            android:name=".SearchCreate"
+            android:label="@string/title_activity_search_create" >
+        </activity>
+        <activity
+            android:name=".Grocery"
+            android:label="@string/title_activity_grocery" >
+        </activity>
+        <activity
+            android:name=".AddDeleteGroceries"
+            android:label="@string/title_activity_add_delete_groceries" >
+        </activity>
+        <activity
+            android:name=".WeekPlanner"
+            android:label="@string/title_activity_week_planner" >
+        </activity>
+        <activity
+            android:name=".AddIngredients"
+            android:label="@string/title_activity_add_ingredients" >
+        </activity>
+        <activity
+            android:name=".SearchResult"
+            android:label="@string/title_activity_search_result" >
+        </activity>
+        <activity
+            android:name=".UpdateMenu"
+            android:label="@string/title_activity_update_menu" >
+        </activity>
+    </application>
+
+</manifest>

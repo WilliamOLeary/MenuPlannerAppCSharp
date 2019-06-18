@@ -1,0 +1,97 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:fillViewport="true"
+    style="@style/background_style"
+    tools:context="com.mpa.menuplannerapp.Recipes">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.mpa.menuplannerapp.AddIngredients"
+        style="@style/background_style">
+
+        <TextView
+            android:id="@+id/ingredientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/createName"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@style/text_style"
+            android:layout_alignBottom="@+id/ingredientNameInput" />
+
+        <EditText
+            android:id="@+id/ingredientNameInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_toRightOf="@+id/ingredientQuantity"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp" />
+
+        <TextView
+            android:id="@+id/ingredientQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addDelGQuantity"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="60dp"
+            android:layout_alignTop="@+id/quantityPicker"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            style="@style/text_style"/>
+
+        <NumberPicker
+            android:id="@+id/weightPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:layout_below="@+id/ingredientNameInput"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50dp" />
+
+        <NumberPicker
+            android:id="@+id/quantityPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:layout_alignTop="@+id/weightPicker"
+            android:layout_toLeftOf="@+id/weightPicker"
+            android:layout_toStartOf="@+id/weightPicker" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/createAddIngredients"
+            android:id="@+id/nextIngredient"
+            android:layout_below="@+id/quantityPicker"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="nextIngredient"
+            style="@style/button_style"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingredientList"
+            android:layout_below="@+id/nextIngredient"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true" ></TableLayout>
+    </RelativeLayout>
+</ScrollView>

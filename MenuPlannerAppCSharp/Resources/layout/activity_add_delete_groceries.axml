@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.mpa.menuplannerapp.AddDeleteGroceries"
+    style="@style/background_style">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/addDelGName"
+        android:id="@+id/nameTextLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="60dp"
+        style="@style/text_style"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTextEntry"
+        android:layout_alignTop="@+id/nameTextLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/nameTextLabel"
+        android:layout_toEndOf="@+id/nameTextLabel"
+        android:inputType="textCapSentences|text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/addDelGQuantity"
+        android:id="@+id/quantityTextLabel"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        style="@style/text_style"/>
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quantityPicker"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addDelGButton"
+        android:id="@+id/addGroceryItemButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onSaveClick"
+        style="@style/button_style"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quantityTextEntry"
+        android:layout_alignTop="@+id/quantityTextLabel"
+        android:layout_toLeftOf="@+id/quantityPicker"
+        android:layout_toRightOf="@+id/quantityTextLabel"
+        android:layout_toEndOf="@+id/quantityTextLabel"
+        android:inputType="number|numberSigned|numberDecimal" />
+
+</RelativeLayout>

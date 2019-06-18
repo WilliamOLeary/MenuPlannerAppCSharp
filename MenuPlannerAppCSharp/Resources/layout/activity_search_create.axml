@@ -1,0 +1,256 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mpa.menuplannerapp.SearchCreate"
+    style="@style/background_style">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/pictureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/createPictureLabel"
+            android:text="@string/createPictureButton"
+            android:onClick="loadPicture"
+            style="@style/button_style"
+            android:layout_alignLeft="@+id/caloriesText"
+            android:layout_alignStart="@+id/caloriesText"
+            android:layout_marginBottom="50dp" />
+
+        <EditText
+            android:id="@+id/recipeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/searchView"
+            android:inputType="text"
+            android:layout_marginTop="50dp"
+            android:layout_alignLeft="@+id/methodStepText"
+            android:layout_alignStart="@+id/methodStepText" />
+
+        <TextView
+            android:id="@+id/createNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/recipeName"
+            android:text="@string/createName"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@style/text_style"
+            android:gravity="left|bottom"
+            android:layout_alignBottom="@+id/recipeName" />
+
+        <TextView
+            android:id="@+id/createPictureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/recipeName"
+            android:text="@string/createPicture"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="50dp"
+            style="@style/text_style"/>
+
+        <EditText
+            android:id="@+id/methodStepText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/addAnotherIngredientButton"
+            android:layout_alignRight="@+id/addAnotherIngredientButton"
+            android:layout_below="@+id/addAnotherIngredientButton"
+            android:gravity="left|top"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="50dp"
+            android:layout_alignLeft="@+id/caloriesText"
+            android:layout_alignStart="@+id/caloriesText" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onSaveClick"
+            android:text="@string/createSave"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/caloriesText"
+            android:layout_alignEnd="@+id/caloriesText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/sodiumText"
+            android:layout_marginTop="50dp"
+            style="@style/button_style"/>
+
+        <TextView
+            android:id="@+id/caloriesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/caloriesText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/createCalories"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@style/text_style"/>
+
+        <EditText
+            android:id="@+id/caloriesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:numeric="signed|integer|decimal"
+            android:layout_below="@+id/methodStepText" />
+
+        <TextView
+            android:id="@+id/methodLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/addAnotherIngredientButton"
+            android:text="@string/createMethod"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="50dp"
+            android:layout_alignBottom="@+id/methodStepText"
+            android:gravity="bottom"
+            style="@style/text_style"/>
+
+        <Button
+            android:id="@+id/addAnotherIngredientButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:onClick="addIngredient"
+            android:text="@string/createIngredientsLaunch"
+            style="@style/button_style"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/pictureButton"
+            android:layout_marginTop="50dp" />
+
+        <TextView
+            android:id="@+id/fatLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/createFat"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/fatText"
+            style="@style/text_style"/>
+
+        <TextView
+            android:id="@+id/carbLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/createCarb"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/carbText"
+            style="@style/text_style"/>
+
+        <TextView
+            android:id="@+id/proteinLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/createProtein"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/proteinText"
+            style="@style/text_style"/>
+
+        <TextView
+            android:id="@+id/sodiumLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/createSodium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/sodiumText"
+            style="@style/text_style"/>
+
+        <EditText
+            android:id="@+id/fatText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:numeric="signed|integer|decimal"
+            android:layout_below="@+id/caloriesText"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/caloriesText"
+            android:layout_alignStart="@+id/caloriesText" />
+
+        <EditText
+            android:id="@+id/carbText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:numeric="signed|integer|decimal"
+            android:layout_below="@+id/fatText"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/fatText"
+            android:layout_alignStart="@+id/fatText" />
+
+        <EditText
+            android:id="@+id/proteinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:numeric="signed|integer|decimal"
+            android:layout_below="@+id/carbText"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/createPictureLabel"
+            android:layout_alignLeft="@+id/carbText"
+            android:layout_alignStart="@+id/carbText" />
+
+        <EditText
+            android:id="@+id/sodiumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:numeric="signed|integer|decimal"
+            android:layout_below="@+id/proteinText"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="50dp" />
+
+    </RelativeLayout>
+
+
+</ScrollView>
